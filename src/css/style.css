@@ -1,6 +1,10 @@
 body {
     overflow: hidden;
 
+    border: 0;
+    margin: 0;
+    padding: 0;
+
     animation: comebackOverflow 1s ease-in 5s forwards;
     animation-fill-mode: forwards;
 }
