@@ -1,0 +1,201 @@
+body {
+    overflow: hidden;
+
+    animation: comebackOverflow 1s ease-in 5s forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes comebackOverflow {
+    From {
+        overflow: hidden;
+    }
+    to {
+        overflow: visible;
+    }
+}
+
+.loading-screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(255, 248, 218);
+
+    animation: goAwayLoading 1s ease-in 5s forwards;
+    animation-fill-mode: forwards;
+
+    user-select: none;
+}
+
+.loading-screen .smol-text {
+    transition: 150ms;
+    top: 1em;
+    left: 1em;
+    opacity: 25%;
+    position: absolute;
+    font-size: smaller;
+    color: rgb(0, 138, 0);
+}
+
+.loading-screen .smol-text a {
+    transition: 150ms;
+    opacity: 100%;
+    color: rgb(0, 255, 0);
+}
+
+.loading-screen .smol-text:hover {
+    transition: 250ms;
+    opacity: 100%;
+    color: rgb(0, 255, 0);
+}
+
+.loading-screen .smol-text a:active {
+    transition: 50ms;
+    opacity: 100%;
+    color: rgb(0, 255, 150);
+}
+
+@keyframes goAwayLoading {
+    From {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+        visibility: hidden;
+        
+        body {
+            overflow: visible;
+        }
+    }
+}
+
+/* From Uiverse.io by jeremyssocial */ 
+@keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+}
+  
+@keyframes typeAndDelete {
+    0%,
+    10% {
+      width: 0;
+    }
+    45%,
+    55% {
+      width: 6.2em;
+    } /* adjust width based on content */
+    90%,
+    100% {
+      width: 0;
+    }
+}
+  
+.terminal-loader {
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    padding: 1.5em 1em;
+    width: 12em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+  
+.terminal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+}
+  
+.terminal-controls {
+    float: right;
+}
+  
+.control {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.4em;
+    border-radius: 50%;
+    background-color: #777;
+}
+
+.control.close {
+    /*background-color: #e33;*/
+    background-color: #ffffff00;
+}
+  
+.control.minimize {
+    /*background-color: #ee0;*/
+    background-color: #ffffff00;
+}
+  
+.control.maximize {
+    /*background-color: #0b0;*/
+    background-color: #ffffff00;
+}
+  
+.terminal-title {
+    float: left;
+    line-height: 1.5em;
+    color: #eee;
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green; /* Cursor */
+    animation:
+      typeAndDelete 4s steps(11) infinite,
+      blinkCursor 0.5s step-end infinite alternate;
+    margin-top: 1.5em;
+}
+
+.control-icon {
+    /*filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);*/
+    margin-top: .2em;
+    height: 175%;
+    width: 175%;   
+    border-radius: 5em;
+}
+
+.control-icon:hover{
+    transition: 500ms;
+    background-color: #88a182;
+}
+
+.control-icon:active{
+    transition: 100ms;
+    background-color: #414e3e;
+}
+
+.text span:hover{
+    transition: 100ms;
+    color: rgb(0, 255, 150);
+}
+
+.text:has(span:active) {
+    transition: 750ms;
+    color: rgb(0, 255, 150);
+}
