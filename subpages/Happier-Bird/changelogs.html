@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts - Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        lato: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>Happier Bird | SimplyOrtiz's Website</title>
+</head>
+<body class="font-lato font-normal text-gray-800">
+    <!-- Header -->
+    <header class="flex items-center h-16 px-4 md:px-8 relative shadow-md">
+        <div class="flex items-center">
+            <a href="#Happier-bird" class="flex items-center">
+                <img src="/src/images/HappierBird-Banner-big.png" alt="Logo" class="h-8 md:h-10">
+            </a>
+        </div>
+        <nav class="flex items-center absolute right-4 md:right-8">
+            <a href="#about" class="text-gray-800 hover:text-blue-600 mx-2 md:mx-4 text-sm md:text-base no-underline">About</a>
+            <a href="#downloads" class="text-gray-800 hover:text-blue-600 mx-2 md:mx-4 text-sm md:text-base no-underline">Download</a>
+            <!--<span class="w-px h-10 bg-gray-300 mx-4 block"></span>
+            <div class="flex items-center ml-4">
+                <a href="#aluno" class="flex items-center text-gray-800 hover:text-blue-600 no-underline">
+                    <img src="https://i2.wp.com/cursos.alura.com.br/assets/images/forum/avatar_g.png" class="h-10 w-10 rounded-full mr-2" alt="Imagem do Avatar">
+                    <span class="hidden md:inline">Nome do Aluno</span>
+                    <img src="https://cursos.alura.com.br/assets/images/header/arrow-down.svg" alt="Seta para baixo" class="ml-1 h-3 w-3">
+                </a>
+            </div>-->
+        </nav>
+    </header>
+
+    <!-- Page Title Section -->
+    <div class="bg-blue-600 py-6 px-4 md:px-8">
+        <h1 class="text-white text-3xl md:text-4xl font-bold">Changelogs</h1>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Latest Update -->
+        <section class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4">Latest Update</h2>
+            <div class="flex flex-wrap gap-4">
+                <!-- Course Card 1 -->
+                <div class="border-2 border-gray-300 rounded-lg p-4 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col justify-between" style="border-left: 2px solid #a475ef;">
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Version: 1.0.1</h3>
+                    <!--<img src="/src/images/birds/bird_purple_0.png" class="w-14 h-14 mb-4" alt="Icon">-->
+                    <p class="text-sm text-gray-600 mb-2">
+                        Content:
+                        <ul class="list-disc pl-10">
+                            <li>Rainbow Pipe fix (Again)</li>
+                            <li>Re-organized Medals Position</li>
+                            <li>Better News Menu</li>
+                        </ul>
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <h3 class="text-lg font-bold">Version type:</h3>
+                        <p class="text-sm text-gray-600">Release</p>
+                    </div>
+                    <a href="#Not-Working" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md text-center flex items-center justify-center gap-2 no-underline">
+                        <img src="/src/images/icons/Download-Button.svg" alt="Download Button" class="h-4 w-4">
+                        Download
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Old Updates -->
+        <section class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4">Other Updates</h2>
+            <div class="flex flex-wrap gap-4">
+                <!-- Default Card -->
+                <div class="border-2 border-gray-300 rounded-lg p-4 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col justify-between" style="border-left: 2px solid #2087ED;">
+                    <!--<p class="text-sm text-gray-600 mb-2"></p>-->
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Version: x.y.z</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        Content:
+                        <ul class="list-disc pl-10">
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                            <li>Lorem, ipsum.</li>
+                        </ul>
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <h3 class="text-lg font-bold">Version type:</h3>
+                        <p class="text-sm text-gray-600">(Alpha, Beta, RC, Release)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Link to all study trails -->
+        <!--<a href="#Downloads-Github" class="text-blue-600 hover:underline py-4 block text-center text-lg">
+            Ver todos os downloads das Versões
+        </a>-->
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-8 py-8 flex justify-center border-t border-gray-200">
+        <a href="https://en.wikipedia.org/wiki/Flappy_Bird" class="flex flex-col items-center justify-center">
+            <img src="/src/images/HappierBird-Banner-big.png" alt="Logo" class="h-10">
+            <p class="text-center">Made as a tribute to the Original <b>Flappy Bird</b></p>
+        </a>
+    </footer>
+</body>
+</html>

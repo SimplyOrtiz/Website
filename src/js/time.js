@@ -1,6 +1,8 @@
 const date = new Date();
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+// const stations = ['spring', 'summer', 'fall', 'winter'] //
+//          'autumn' it's the same thing as 'fall'         //
 
 // season : {Station} ## String ##
 // colors : {MainColor}, {SecondaryColor}, {ComplementaryColor}, {TextColor} ## String ##
@@ -39,7 +41,7 @@ function CheckStation(){
     for (var i = 0; i < StationMonths.length; i++) {
         if (StationMonths[i].months.includes(CurrentMonth)) {
             console.log(StationMonths[i].season);
-            return;
+            return; // Encontrou a estação, pode sair da função
         }
     }
         
